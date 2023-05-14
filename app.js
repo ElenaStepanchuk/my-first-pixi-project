@@ -15,7 +15,7 @@ const bulletSpeed = 10;
 let arrayAsteroids = [];
 const audioSpiceShip = new Audio("./audio/spiceShipShoot.mp3");
 const audioBoss = new Audio("./audio/bossShoot.mp3");
-const audioFonMusic = new Audio("../audio/fonMusic.mp3");
+const audioFonMusic = new Audio("./audio/fonMusic.mp3");
 
 const app = new Application({
   width: widthCanvas,
@@ -234,6 +234,7 @@ const game = () => {
       app.stage.removeChild(shipSprite);
       app.stage.addChild(endGame);
       windowTimerStop();
+      document.removeEventListener("keydown", controlButton);
       return;
     }
   }
@@ -533,6 +534,7 @@ function gameBoss() {
       app.stage.removeChild(bulletsBoss);
       app.stage.removeChild(bullets);
       app.stage.addChild(endGame);
+      document.removeEventListener("keydown", controlButton);
       windowTimerStop();
       return;
     }
