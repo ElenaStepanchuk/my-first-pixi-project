@@ -40,11 +40,6 @@ function StarsAnime() {
     star.y = Math.sin(deg) * distance;
   }
 
-  // Change flight speed every 5 seconds
-  //   setInterval(() => {
-  //     warpSpeed = warpSpeed > 0 ? 0 : 1;
-  //   }, 5000);
-
   // Listen for animate update
   app.ticker.add((delta) => {
     // Simple easing. This should be changed to proper easing function when used for real.
